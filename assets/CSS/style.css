@@ -70,9 +70,9 @@
     background-image: url("../Images/Background.png");
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 42em;
+    height: 100vh;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .sell__headline {
@@ -163,7 +163,7 @@
 .statistics__description {
     color: var(--color-grey);
     font-size: 17px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .benefits {
@@ -190,13 +190,33 @@
 .benefits__box-description {
     background-color: var(--color-white);
     max-width: 40em;
-    padding: 100px;
+    padding: 70px;
+    position: relative;
+}
+
+.benefits__box-description::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 4px;
+    background-color: var(--color-redish);
+    bottom: 10%;
+    left: 15%;
+}
+
+.benefits__box-description-2::before {
+    background-color: var(--color-primary);
+}
+
+.benefits__box-description-3::before {
+    background-color: var(--color-green);
 }
 
 
 .benefits__box-images {
-   max-width: 30em;
+    max-width: 30em;
     background-color: var(--color-white);
+    position: relative;
 }
 
 .benefits__box-images-3 {
@@ -209,12 +229,37 @@
 }
 
 .benefits__box-image {
+    position: relative;
     max-height: 80%;
     max-width: 80%;
 }
 
 .benefits__box-image-1 {
-    margin-top: 170px;
+    top: 30%;
+}
+
+.benefits__box-images-1::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    background-color: var(--color-redish);
+    top: 20%;
+    left: 50%;
+    rotate: 45deg;
+}
+
+.benefits__box-images-2::before {
+    content: "";
+    position: absolute;
+    width: 265px;
+    height: 265px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    top: 10%;
+    left: 15%;
+    rotate: 45deg;
 }
 
 .benefits__box-image-2 {
@@ -223,9 +268,11 @@
 }
 
 .benefits__box-image-3 {
-    display: block;
-    margin: auto;
-    padding-top: 120px;
+    position: relative;
+    top: 25%;
+    left: 10%;
+
+
 
 }
 
@@ -242,7 +289,156 @@
     padding: 20px;
 }
 
-.benefits__box-text-1 {
-
+.pricing__headline {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: "Raleway", sans-serif;
+    font-size: 36px;
+    margin-bottom: 33px;
 }
 
+.pricing__content {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.pricing__boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+.pricing__box {
+    border: 1px solid var(--color-redish);
+    border-radius: 10px;
+    padding: 20px 60px;
+    position: relative;
+}
+.pricing__box-2 {
+    border-color: var(--color-primary);
+    scale: 120%;
+}
+
+.pricing__box-3 {
+    border-color: var(--color-green);
+}
+
+.pricing__box__headline {
+    font-family: "Raleway", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing__box__price {
+    font-size: 46px;
+    color: var(--color-redish);
+    margin-bottom: 15px;
+}
+
+.pricing__box__price-2 {
+    color: var(--color-primary);
+}
+
+.pricing__box__price-3 {
+    color: var(--color-green);
+}
+
+.pricing__box__limit {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+.pricing__list li {
+    margin-bottom: 10px;
+}
+
+.pricing__list__element {
+    font-size: 14px;
+    position: relative;
+}
+
+.pricing__list-1 .pricing__list__element-1::before, .pricing__list-1 .pricing__list__element-2::before, .pricing__list-1 .pricing__list__element-3::before{
+    content: "";
+    background-image: url("../Images/Ckechmark-1.svg");
+    background-size: cover;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin-left: -14px;
+    top: 2px;
+}
+
+.pricing__list-1 .pricing__list__element-4::before, .pricing__list-1 .pricing__list__element-5::before{
+    content: "";
+    background-image: url("../Images/Close.svg");
+    background-size: cover;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin-left: -14px;
+    top: 2px;
+}
+
+.pricing__list-2 .pricing__list__element-1::before, .pricing__list-2 .pricing__list__element-2::before, .pricing__list-2 .pricing__list__element-3::before, .pricing__list-2 .pricing__list__element-4::before{
+    content: "";
+    background-image: url("../Images/Ckechmark-1.svg");
+    background-size: cover;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin-left: -14px;
+    top: 2px;
+}
+
+.pricing__list-2 .pricing__list__element-5::before{
+    content: "";
+    background-image: url("../Images/Close.svg");
+    background-size: cover;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin-left: -14px;
+    top: 2px;
+}
+
+.pricing__list-3 .pricing__list__element-1::before, .pricing__list-3 .pricing__list__element-2::before, .pricing__list-3 .pricing__list__element-3::before, .pricing__list-3 .pricing__list__element-4::before, .pricing__list-3 .pricing__list__element-5::before{
+    content: "";
+    background-image: url("../Images/Ckechmark-1.svg");
+    background-size: cover;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    margin-left: -14px;
+    top: 2px;
+}
+
+.pricing__box__link {
+    position: absolute;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: var(--color-redish);
+    color: var(--color-white);
+    top:100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pricing__box__link-2 {
+    background-color: var(--color-primary);
+}
+
+.pricing__box__link-3 {
+    background-color: var(--color-green);
+}
