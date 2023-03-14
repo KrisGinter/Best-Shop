@@ -1,0 +1,136 @@
+@use "../Settings/variables.scss";
+
+.contact .container {
+  display: flex;
+  max-width: 800px;
+  justify-content: space-around;
+  margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 66px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact__questions {
+  max-width: 350px;
+  font-family: "Open Sans", sans-serif;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 30px;
+  }
+}
+
+.contact__questions__details {
+  display: flex;
+  justify-content: space-around;
+  color: variables.$color-grey;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact__questions__headline {
+  font-family: "Raleway", sans-serif;
+  font-size: 49px;
+  margin-bottom: 20px;
+}
+
+.contact__questions__text {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.contact__questions__details__mail, .contact__questions__details__mobile {
+  position: relative;
+}
+
+.contact__questions__details__mail::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("./Images/Mail Icon.svg");
+  background-size: cover;
+  position: absolute;
+  margin-left: -21px;
+  margin-top: -2px;
+}
+
+.contact__questions__details__mobile::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("./Images/Phone Icon.svg");
+  background-size: cover;
+  position: absolute;
+  margin-left: -21px;
+  margin-top: -2px;
+}
+
+.name__label, .mail__label {
+  font-weight: 700;
+  color: variables.$color-primary;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.name, .mail {
+  border: none;
+  border-bottom: 1px solid #95989A;
+  margin-bottom: 20px;
+}
+
+.checkbox__consent {
+  font-size: 12px;
+  color: #707070;
+  margin-left: 5px;
+  max-width: 300px;
+}
+
+.form__label {
+  display: flex;
+}
+
+.form__input--checkbox {
+  display: none;
+  cursor: pointer;
+
+}
+
+.checkbox__span {
+  border: 1px solid #ddd;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  position: relative;
+  margin-left: -1px;
+  cursor: pointer;
+
+}
+.form__input--checkbox:checked + .checkbox__span::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url("./Images/Checkmark.svg");
+  background-size: cover;
+  background-position: center;
+  margin-left: 1px;
+  margin-top: 1px;
+  position: absolute;
+}
+
+.button {
+  padding: 15px 70px;
+  border-radius: 30px;
+  align-self: flex-end;
+  background-color: variables.$color-primary;
+  color: variables.$color-white;
+  border: none;
+  font-weight: 700;
+  margin-top: 20px;
+}

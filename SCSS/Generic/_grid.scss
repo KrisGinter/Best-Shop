@@ -1,0 +1,83 @@
+@use "sass:map";
+
+$columns: 12;
+$grid-breakpoints: (
+        xs: 575px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        hd: 1600px
+);
+$container-breakpoints: (
+        xs: 100%,
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        hd: 1320px
+);
+
+@mixin create-container($grid-breakpoints, $container-breakpoints) {
+  @each $breakpoint in map.keys($grid-breakpoints) {
+
+    $media-type: "min-width";
+    @if($breakpoint == "xs") {
+      $media-type: "max-width";
+    }
+
+    @media screen and (#{$media-type}: map.get($grid-breakpoints, $breakpoint)){
+      .container {
+        max-width: #{map.get($container-breakpoints, $breakpoint)};
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@mixin create-col($columns, $grid-breakpoints, $gutter: 15px) {
+  $base-column-width: 100% / $columns;
+
+  @for $i from 1 through $columns {
+    @each $breakpoint in map.keys($grid-breakpoints) {
+      $media-type: "min-width";
+      @if($breakpoint == "xs") {
+        $media-type: "max-width";
+      }
+
+      @media screen and (#{$media-type}: map.get($grid-breakpoints, $breakpoint)){
+        .col-#{$breakpoint}-#{$i} {
+          min-height: 1px;
+          width: $base-column-width * $i;
+          padding: 0 $gutter;
+        }
+      }
+    }
+
+    .col-#{$i} {
+      min-height: 1px;
+      width: $base-column-width * $i;
+      padding: 0 $gutter;
+    }
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@include create-container($grid-breakpoints, $container-breakpoints);
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include create-col($columns, $grid-breakpoints);

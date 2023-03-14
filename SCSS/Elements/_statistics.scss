@@ -1,0 +1,80 @@
+@use "../Settings/variables.scss";
+@use "./base.scss";
+
+.statistics .container {
+  text-align: center;
+}
+
+.statistics__headline {
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  @media screen and (max-width: 768px) {
+  max-width: 300px;
+    margin: auto;
+
+  }
+}
+
+.statistics__boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.statistics__box {
+  margin: 0 40px;
+  font-family: "Raleway", sans-serif;
+  max-width: 100px;
+}
+
+.statistics__images {
+  height: 5em;
+}
+
+.statistics__image {
+  margin-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.statistics__image-2 {
+  margin-top:  10px;
+}
+
+.statistics__images::before {
+  content: "";
+  position: absolute;
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 50%;
+  background-color: variables.$color-redish;
+  z-index: 1;
+}
+
+.statistics__images-2::before {
+  background-color: variables.$color-primary;
+}
+
+.statistics__images-3::before {
+  background-color: variables.$color-green;
+}
+
+.statistics__numbers {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.statistics__description {
+  color: variables.$color-grey;
+  font-size: 17px;
+  margin-bottom: 50px;
+}

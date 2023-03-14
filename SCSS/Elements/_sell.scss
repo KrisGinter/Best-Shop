@@ -1,0 +1,53 @@
+@use "../Settings/variables.scss";
+@use "./base.scss";
+
+
+.sell .container{
+  height: 90vh;
+  min-height: 450px;
+  text-align: center;
+  margin-top: 50px;
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+    height: 80vh;
+  }
+}
+
+.sell__headline {
+  font-family: "Raleway", sans-serif;
+  font-size: 49px;
+}
+
+.sell__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  @media screen and (max-width: 768px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+  }
+}
+
+.sell__link {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: variables.$color-white;
+  text-decoration: none;
+  padding: 22px 130px;
+  border-radius: 44px;
+  background-color: variables.$color-primary;
+}
+
+.background {
+  object-fit: cover;
+  width: 100%;
+  margin-top: 25px;
+  object-position: bottom;
+  @media screen and (max-width: 768px) {
+    margin-top: 87px;
+  }
+
+}

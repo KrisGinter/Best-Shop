@@ -1,0 +1,156 @@
+@use "../Settings/variables.scss";
+
+.benefits {
+  padding-top: 100px;
+}
+
+.benefits {
+  background-color: variables.$color-light-grey;
+}
+
+
+.benefits__box {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  max-width: 1100px;
+  padding: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    &:first-child {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.benefits__box-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.benefits__box-description {
+  background-color: variables.$color-white;
+  max-width: 40em;
+  padding: 0 70px 20px 10px;
+  position: relative;
+}
+
+.benefits__box-description::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 4px;
+  background-color: variables.$color-redish;
+  bottom: 10%;
+  left: 15%;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.benefits__box-description-2::before {
+  background-color: variables.$color-primary;
+}
+
+.benefits__box-description-3::before {
+  background-color: variables.$color-green;
+}
+
+
+.benefits__box-images {
+  max-width: 30em;
+  background-color: variables.$color-white;
+  position: relative;
+  min-height: 300px;
+}
+
+.benefits__box-images-3 {
+  background-color: variables.$color-green;
+  max-width: 30em;
+  border-radius: 5px;
+}
+
+.benefits__box-description-3 {
+  max-width: 35em;
+}
+
+.benefits__box-image {
+  position: relative;
+  max-height: 80%;
+  max-width: 80%;
+}
+
+.benefits__box-image-1 {
+  top: 30%;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    max-width: 300px;
+    left: 10%;
+  }
+}
+
+.benefits__box-images-1::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 25px;
+  background-color: variables.$color-redish;
+  top: 20%;
+  left: 50%;
+  rotate: 45deg;
+}
+
+.benefits__box-images-2::before {
+  content: "";
+  position: absolute;
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  background-color: variables.$color-primary;
+  top: 10%;
+  left: 15%;
+  rotate: 45deg;
+}
+
+.benefits__box-image-2 {
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.benefits__box-image-3 {
+  position: relative;
+  top: 25%;
+  left: 10%;
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 30%;
+  }
+
+
+
+}
+
+.benefits__box-headline {
+  font-size: 36px;
+  font-family: "Raleway", sans-serif;
+  margin: 20px;
+  max-width: 8em;
+}
+
+.benefits__box-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.pricing__headline {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-family: "Raleway", sans-serif;
+  font-size: 36px;
+  margin-bottom: 33px;
+}
